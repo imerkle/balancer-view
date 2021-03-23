@@ -1,18 +1,3 @@
-kind: PersistentVolume
-apiVersion: v1
-metadata:
-  namespace: core
-  name: postgres-pv-volume
-  labels:
-    type: local
-    app: postgres
-spec:
-  storageClassName: do-block-storage
-  capacity:
-    storage: 5Gi
-  accessModes:
-    - ReadWriteMany
----
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
