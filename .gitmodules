@@ -1,0 +1,6 @@
+[submodule "balancer-view-server"]
+	path = balancer-view-server
+	url = git@github.com:imerkle/balancer-view-server.git
+[submodule "balancer-view-ui"]
+	path = balancer-view-ui
+	url = git@github.com:imerkle/balancer-view-ui.git
