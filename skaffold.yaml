@@ -1,0 +1,29 @@
+apiVersion: skaffold/v2beta12
+kind: Config
+profiles:
+  - name: profile1
+    activation:
+      - env: MAGIC_VAR=1337
+      - kubeContext: minikube
+        command: dev
+    build:
+      artifacts:
+        - image: ghcr.io/imerkle/balancer-view-server
+          context: balancer-view-server
+          docker:
+            dockerfile: "Dockerfile"
+        - image: ghcr.io/imerkle/balancer-view-ui
+          context: balancer-view-ui
+          docker:
+            dockerfile: "Dockerfile"
+      tagPolicy:
+        gitCommit: {}
+    deploy:
+      kubectl:
+        manifests:
+          - ./k8s/namespace.yaml
+          - ./k8s/docker-secret.yaml
+          - ./k8s/db.yaml
+          - ./k8s/app.yaml
+          - ./k8s/ui.yaml
+          - ./k8s/pv.yaml
