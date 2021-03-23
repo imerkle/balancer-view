@@ -23,7 +23,7 @@ profiles:
         manifests:
           - ./k8s/namespace.yaml
           - ./k8s/docker-secret.yaml
+          - ./k8s/pv.yaml
           - ./k8s/db.yaml
           - ./k8s/app.yaml
           - ./k8s/ui.yaml
-          - ./k8s/pv.yaml

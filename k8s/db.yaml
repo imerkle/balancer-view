@@ -37,13 +37,6 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: postgresdb
-          resources:
-            requests:
-              memory: "32Mi"
-              cpu: "100m"
-            limits:
-              memory: "500Mi"
-              cpu: "500m"
           env:
             - name: POSTGRES_PASSWORD
               value: "postgres"
