@@ -35,11 +35,13 @@ spec:
             - configMapRef:
                 name: postgres-config
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data/d
+            - mountPath: /var/lib/postgresql/data
               name: postgresdb
           env:
             - name: POSTGRES_PASSWORD
               value: "postgres"
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
       volumes:
         - name: postgresdb
           persistentVolumeClaim:
