@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: go-server-deployment
   namespace: core
-  annotations:
-    service.beta.kubernetes.io/do-loadbalancer-protocol: "http"
 spec:
   selector:
     matchLabels:
@@ -33,6 +31,7 @@ metadata:
   name: go-server-service
   namespace: core
 spec:
+  type: ClusterIP
   selector:
     app: go-server
   ports:

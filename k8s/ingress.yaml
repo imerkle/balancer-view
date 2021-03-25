@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: balancerview.swapcharts.xyz
+    - host: balancerview.157.230.214.89.nip.io
       http:
         paths:
           - path: /
@@ -17,7 +17,7 @@ spec:
                 name: ui-service
                 port:
                   number: 80
-    - host: balancerviewserver.swapcharts.xyz
+    - host: balancerviewserver.157.230.214.89.nip.io
       http:
         paths:
           - path: /

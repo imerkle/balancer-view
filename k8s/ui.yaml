@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: ui-deployment
   namespace: core
-  annotations:
-    service.beta.kubernetes.io/do-loadbalancer-protocol: "http"
 spec:
   selector:
     matchLabels:
@@ -35,6 +33,7 @@ metadata:
   name: ui-service
   namespace: core
 spec:
+  type: ClusterIP
   selector:
     app: ui
   ports:
