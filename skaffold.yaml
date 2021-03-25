@@ -27,3 +27,4 @@ profiles:
           - ./k8s/db.yaml
           - ./k8s/app.yaml
           - ./k8s/ui.yaml
+          - ./k8s/ingress.yaml
