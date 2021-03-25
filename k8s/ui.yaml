@@ -33,7 +33,6 @@ metadata:
   name: ui-service
   namespace: core
 spec:
-  type: ClusterIP
   selector:
     app: ui
   ports:
