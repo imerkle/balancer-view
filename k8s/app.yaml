@@ -23,7 +23,7 @@ spec:
             - name: PORT
               value: "80"
             - name: SYNC_INTERVAL
-              value: 180              
+              value: "180"              
           ports:
             - containerPort: 80
 ---
