@@ -22,6 +22,8 @@ spec:
               value: "postgres://postgres:postgres@postgres-service.core.svc.cluster.local:5432/postgres"
             - name: PORT
               value: "80"
+            - name: SYNC_INTERVAL
+              value: 180              
           ports:
             - containerPort: 80
 ---
