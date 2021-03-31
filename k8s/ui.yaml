@@ -16,7 +16,7 @@ spec:
         - name: docker-secret
       containers:
         - name: ui
-          image: ghcr.io/imerkle/balancer-view-ui:865759c728a8a5d9e71db9a82a5d7de6eda0d0f0
+          image: ghcr.io/imerkle/balancer-view-ui:2f5ea661aab6a071aa6b9773501b7576ef97cb7f
           resources:
             requests:
               memory: "32Mi"
