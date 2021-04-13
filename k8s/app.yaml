@@ -16,7 +16,7 @@ spec:
         - name: docker-secret
       containers:
         - name: go-server
-          image: ghcr.io/imerkle/balancer-view-server:e567a6a2be9f4b008113ffd28ad80c233d8ab279
+          image: ghcr.io/imerkle/balancer-view-server:84b3dfb39b742c22e9aec75d891972f1bf5cf92e
           env:
             - name: POSTGRES_CONN
               value: "postgres://postgres:postgres@postgres-service.core.svc.cluster.local:5432/postgres"
